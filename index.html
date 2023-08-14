@@ -4,43 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team Project</title>
-    <link rel="stylesheet" type="./css" href="style.css" />
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-        }
-
-        nav {
-            background-color: #444;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-        }
-
-        section {
-            padding: 20px;
-            text-align: center;
-        }
-
-        footer {
-            background-color: #333;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-        }
-    </style>
-
+    <link rel="stylesheet" href="style.css" />
+   
 </head>
 <body>
     <script src="./index.js"></script>
+    <header class="top-header">
+        <div class="top-header-section">
+          <h1>Show Finder</h1>
+        </div>
+      </header>
+    <div class="right-half">
+        <div class="earch-bar">
+            <form role="search-role" id="form">
+                <input
+                type="search"
+                id="query-details"
+                name="h"
+                placeholder="Find a show"
+                />
+                <button>Search</button>
+            </form>
+        </div>
+    </div>
+    <div class="left-half">
+        <div class="show-image">
+            <img src="C:\Users\Aaron Gholson\OneDrive\Pictures\IPH.jpg" alt="Image Holder" width="310" height="389">
+        </div>
+        <div class="left-half-details">
+            <ul id="show-name">Name:</ul>
+            <ul id="show-length">Length:</ul>
+            <p id="show-sum">Summary:</p>
+        </div>
+    </div>
 </body>
 </html>
