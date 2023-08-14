@@ -1,1 +1,49 @@
+/* Body */
+body {
+    background: white;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.top-header-section {
+    background-color: #3361FF;
+    font-size: large;
+    padding: 1%;
+    border-style: solid;
+}
 
+/* Left Side of Site */
+.left-half {
+    background-color: white;
+    position: absolute;
+    top: 25%;
+    bottom: 0%;
+    width: 48%;
+    left: 9px;
+}
+.left-half-details {
+    background-color: #3361FF;
+    margin-top: 0%;
+    text-align: left;
+    border-style: solid;
+}
+#show-sum{
+    margin-left: 5%;
+}
+
+/* Right Side of Site */
+.right-half {
+    background-color: #3361FF;
+    position: absolute;
+    top: 25%;
+    bottom: 0%;
+    width: 48%;
+    right: 9px;
+    border-style: solid;
+}
+#form {
+    margin: 2%;
+    padding: 1%;
+}
+.search-list {
+    background-color: white;
+}

@@ -4,8 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team Project</title>
+    <link rel="stylesheet" href="style.css" />
+   
 </head>
 <body>
     <script src="./index.js"></script>
+    <header class="top-header">
+        <div class="top-header-section">
+          <h1>Show Finder</h1>
+        </div>
+      </header>
+    <div class="right-half">
+        <div class="search-bar">
+            <form role="search-role" id="form">
+                <input
+                type="search"
+                id="query-details"
+                name="h"
+                placeholder="Find a show"
+                />
+                <button>Search</button>
+            </form>
+        </div>
+        <div class="search-list"></div>
+    </div>
+    <div class="left-half">
+        <div class="show-image">
+            <img src="C:\Users\Aaron Gholson\OneDrive\Pictures\IPH.jpg" alt="Image Holder" width="310" height="389">
+        </div>
+        <div class="left-half-details">
+            <ul id="show-name">Name:</ul>
+            <ul id="show-length">Length:</ul>
+            <p id="show-sum">Summary:</p>
+        </div>
+    </div>
 </body>
 </html>
