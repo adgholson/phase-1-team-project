@@ -3,7 +3,6 @@ body {
     background: white;
     text-align: center;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    
 }
 .top-header-section {
     background-color: #3361FF;
@@ -18,7 +17,7 @@ body {
     position: absolute;
     top: 25%;
     bottom: 0%;
-    width: 49%;
+    width: 48%;
     left: 9px;
 }
 .left-half-details {
@@ -37,10 +36,14 @@ body {
     position: absolute;
     top: 25%;
     bottom: 0%;
-    width: 49%;
+    width: 48%;
     right: 9px;
     border-style: solid;
 }
 #form {
     margin: 2%;
+    padding: 1%;
+}
+.search-list {
+    background-color: white;
 }
