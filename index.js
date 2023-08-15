@@ -19,8 +19,20 @@ document.addEventListener("DOMContentLoaded", () => {
       showLength.textContent = `Runtime: ${show.runtime}`;
       const showLanguage = document.querySelector("#show-lang");
       showLanguage.textContent = ` Language: ${show.language}`;
+      
+      const showRating = document.querySelector("#show-rating");
+
+    showImage.addEventListener("mouseover", () => {
+      showRating.textContent = `Rating: ${show.rating.average || 'N/A'}`;
+      showRating.classList.remove("hidden");
+    });
+
+    showImage.addEventListener("mouseout", () => {
+      showRating.classList.add("hidden");
+    });
     });
   };
+  
 
   fetch("https://api.tvmaze.com/shows")
     .then((r) => r.json())
@@ -31,7 +43,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
       searchBar(shows);
     });
-
   function searchBar(shows) {
     searchInput.addEventListener("input", (e) => {
       const value = e.target.value.toLowerCase();
