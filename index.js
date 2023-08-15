@@ -2,15 +2,11 @@ const searchInput = document.querySelector("search-input");
 const showList = document.querySelector("show-list"); //hoisted to top for organization
 
 const addNames = (show) => {
-  //changed function declaration declaring arrow function in arrow function
-
-  // create const for new name span/div/header//
   const showName = document.createElement("span");
-  //set textContent to show.name
   showName.textContent = show.name;
-  //const for where new show name is put//
-  // showList = document.querySelector("show-list"); hoisted show-list
-  //append first const to the second//
+
+  //add functions for event listeners here?
+
   showList.appendChild(showName);
 };
 
@@ -28,7 +24,7 @@ searchInput.addEventListener("input", (e) => {
   });
 });
 
-fetch("https://api.tvmaze.com/shows%22")
+fetch("https://api.tvmaze.com/shows")
   .then((r) => r.json())
   .then((shows) => {
     // shows = data;
