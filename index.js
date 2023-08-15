@@ -7,8 +7,19 @@ document.addEventListener("DOMContentLoaded", () => {
   const addNames = (show) => {
     const showName = document.createElement("li");
     showName.textContent = show.name;
-    showName.classList.add("hidden");
     showList.appendChild(showName);
+    showName.classList.add("hidden");
+
+    showName.addEventListener("click", () => {
+      const showImage = document.querySelector(".show-pic");
+      showImage.src = show.image.medium;
+      const showTitle = document.querySelector("#show-name");
+      showTitle.textContent = `Title: ${show.name}`;
+      const showLength = document.querySelector("#show-length");
+      showLength.textContent = `Runtime: ${show.runtime}`;
+      const showLanguage = document.querySelector("#show-lang");
+      showLanguage.textContent = ` Language: ${show.language}`;
+    });
   };
 
   fetch("https://api.tvmaze.com/shows")
@@ -20,6 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
       searchBar(shows);
     });
+
   function searchBar(shows) {
     searchInput.addEventListener("input", (e) => {
       const value = e.target.value.toLowerCase();
@@ -36,6 +48,11 @@ document.addEventListener("DOMContentLoaded", () => {
             showNameElement.classList.add("hidden");
           }
         });
+        if (value === "") {
+          showNameElements.forEach((showNameElement) => {
+            showNameElement.classList.add("hidden");
+          });
+        }
       });
     });
   }
