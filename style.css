@@ -51,3 +51,15 @@ body {
 .hidden {
   display: none;
 }
+
+.search-list {
+  list-style-type: none;
+  padding: 0;
+  border: 1px solid #ddd;
+}
+
+.search-list li {
+  padding: 8px 16px;
+  border-bottom: 2px solid #ddd;
+  border-color: rgb(40, 40, 40);
+}
