@@ -47,3 +47,6 @@ body {
 .search-list {
     background-color: white;
 }
+.hidden {
+    visibility: hidden;
+}
