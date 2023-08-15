@@ -26,7 +26,14 @@
                 <button>Search</button>
             </form>
         </div>
-        <div class="search-list"></div>
+        <div class="search-list">
+            <div class="show-cards"></div>
+            <template data-show-template>
+                <div class="card">
+                    <div class="header" data-header></div>
+                </div>
+            </template>
+        </div>
     </div>
     <div class="left-half">
         <div class="show-image">
@@ -35,7 +42,7 @@
         <div class="left-half-details">
             <ul id="show-name">Name:</ul>
             <ul id="show-length">Length:</ul>
-            <p id="show-sum">Summary:</p>
+            <ul id="show-sum">Summary:</ul>
         </div>
     </div>
 </body>
