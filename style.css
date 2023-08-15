@@ -21,22 +21,37 @@ body {
   width: 48%;
   left: 9px;
 }
+.show-rating {
+  background-color: black;
+  color: white;
+  padding: 5px;
+  position: center;
+  bottom: 0;
+  width: 90%;
+  text-align: center;
+  transition: opacity 0.3s;
+  pointer-events: none;
+  margin-left: 30px;
+}
 .left-half-details {
   background-color: #3361ff;
-  margin-top: 0%;
+  margin-top: 5%;
   text-align: left;
   border-style: solid;
+  
 }
-#show-lang {
-  margin-left: 5%;
+.hover-text {
+  font-size: smaller;
 }
+
+
 
 /* Right Side of Site */
 .right-half {
   background-color: #3361ff;
   position: absolute;
   top: 25%;
-  bottom: 0%;
+  bottom: -13.9%;
   width: 48%;
   right: 9px;
   border-style: solid;
