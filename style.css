@@ -93,3 +93,7 @@ body {
 .new-show-form li{
   list-style-type: none;
 }
+
+#new-show-btn{
+  position: absolute;
+}
