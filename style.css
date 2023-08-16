@@ -78,3 +78,18 @@ body {
   border-bottom: 2px solid #ddd;
   border-color: rgb(40, 40, 40);
 }
+
+.new-show-div {
+  background-color: #3361ff;
+  margin-top: 5%;
+  text-align: left;
+  border-style: solid;
+}
+
+#submit-span {
+  text-align: right;
+}
+
+.new-show-form li{
+  list-style-type: none;
+}
