@@ -66,14 +66,16 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   }
-  const newShowForm = document.querySelector(".new-show");
+  const newShowForm = document.querySelector("#new-show");
   newShowForm.addEventListener("submit", (e) => {
     e.preventDefault();
-    const showNameInput = document.querySelector(".form-name");
-    const showRuntimeInput = document.querySelector(".form-run");
-    const showLanguageInput = document.querySelector(".form-lang");
-    const showRatingInput = document.querySelector(".form-rating");
+    const showImageInput = document.querySelector("#form-image");
+    const showNameInput = document.querySelector("#form-title");
+    const showRuntimeInput = document.querySelector("#form-run");
+    const showLanguageInput = document.querySelector("#form-lang");
+    const showRatingInput = document.querySelector("#form-rating");
     const newShow = {
+      image: showImageInput.value,
       name: showNameInput.value,
       runtime: showRuntimeInput.value,
       language: showLanguageInput.value,
@@ -96,13 +98,13 @@ document.addEventListener("DOMContentLoaded", () => {
     showLanguageInput.value = "";
     showRatingInput.value = "";
   });
-  fetch("http://localhost:3000/shows")
-    .then((r) => r.json())
-    .then((data) => {
-      shows.push(...data);
-      shows.forEach((show) => {
-        addNames(show);
-      });
-      searchBar(shows);
+ fetch("http://localhost:3000/userData")
+  .then((r) => r.json())
+  .then((data) => {
+    shows.push(...data);
+    shows.forEach((show) => {
+      addNames(show);
     });
+    searchBar(shows);
+  });
 });
