@@ -19,20 +19,19 @@ document.addEventListener("DOMContentLoaded", () => {
       showLength.textContent = `Runtime: ${show.runtime}`;
       const showLanguage = document.querySelector("#show-lang");
       showLanguage.textContent = ` Language: ${show.language}`;
-      
+
       const showRating = document.querySelector("#show-rating");
 
-    showImage.addEventListener("mouseover", () => {
-      showRating.textContent = `Rating: ${show.rating.average || 'N/A'}`;
-      showRating.classList.remove("hidden");
-    });
+      showImage.addEventListener("mouseover", () => {
+        showRating.textContent = `Rating: ${show.rating.average || "N/A"}`;
+        showRating.classList.remove("hidden");
+      });
 
-    showImage.addEventListener("mouseout", () => {
-      showRating.classList.add("hidden");
-    });
+      showImage.addEventListener("mouseout", () => {
+        showRating.classList.add("hidden");
+      });
     });
   };
-  
 
   fetch("https://api.tvmaze.com/shows")
     .then((r) => r.json())
@@ -67,83 +66,43 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   }
+  const newShowForm = document.querySelector(".new-show");
+  newShowForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const showNameInput = document.querySelector(".form-name");
+    const showRuntimeInput = document.querySelector(".form-run");
+    const showLanguageInput = document.querySelector(".form-lang");
+    const showRatingInput = document.querySelector(".form-rating");
+    const newShow = {
+      name: showNameInput.value,
+      runtime: showRuntimeInput.value,
+      language: showLanguageInput.value,
+      rating: { average: showRatingInput.value },
+    };
+    fetch("http://localhost:3000/userData", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(newShow),
+    })
+      .then((r) => r.json())
+      .then((newShowResponse) => {
+        shows.push(newShowResponse);
+        addNames(newShowResponse);
+      });
+    showNameInput.value = "";
+    showRuntimeInput.value = "";
+    showLanguageInput.value = "";
+    showRatingInput.value = "";
+  });
+  fetch("http://localhost:3000/shows")
+    .then((r) => r.json())
+    .then((data) => {
+      shows.push(...data);
+      shows.forEach((show) => {
+        addNames(show);
+      });
+      searchBar(shows);
+    });
 });
-
-// //create new div element to contain display area
-// const createHoverDisplay = () => {
-//   const hoverInfo = document.createElement("div");
-//   hoverInfo.classList.add("hover-info"); // might need to change when able to view CSS?
-//   //create elements to display name, image, summary for hovered show
-//   const hoverName = document.createElement("name");
-//   const hoverImage = document.createElement("image");
-//   const hoverSum = document.createElement("sum");
-//   //const hoverInfo = document.createElement("div");
-
-//   hoverInfo.append(hoverName);
-//   hoverInfo.append(hoverImage);
-//   hoverInfo.append(hoverSum);
-//   //add hover display to body of webpage
-//   document.body.append(hoverInfo);
-
-//   return { hoverName, hoverImage, hoverSum, hoverInfo };
-// };
-// const setupHoverInteraction = () => {
-//   const { hoverName, hoverImage, hoverSum, hoverInfo } = createHoverDisplay(); //assign for easier access
-
-//   showList.addEventListener("mouseover", (event) => {
-//     const showId = event.target.dataset.showId;
-
-//     if (showId) {
-//       //checks value to show valid ID
-//       const hoveredShow = shows.find((show) => show.id == parseInt(showId));
-
-//       if (hoveredShow) {
-//         // updates content of the hover display with info of show and makes it visible
-//         hoverName.textContent = hoveredShow.name;
-//         hoverImage.src = hoveredShow.image ? hoveredShow.image.medium : "placeholder-img";
-//         hoverSum.textContent = hoveredShow.summary || "No summary available.";
-//         hoverInfo.style.display = "block";
-//       }
-//     }
-//   }); //make trigger for when mouse moves away from list to make hoverInfo hidden.
-//   showList.addEventListener("mouseout", () => {
-//     hoverInfo.style.display = "none";
-//   });
-// };
-//   };
-// });
-
-//showList.addEventListener("mouseover", (event) => {
-// const showId = event.target.dataset.showId;
-
-// if (showId) {
-//  const hoveredShow = shows.find((show) => show.id == parseInt(showId));
-
-// if (hoveredShow) {
-//   hoverName.textContent = hoveredShow.name;
-//  hoverImage.src = hoveredShow.image ? hoveredShow.image.medium : "placeholder-img";
-//  hoverSum.textContent = hoveredShow.summary || "No summary available.";
-//hoverInfo.style.display = "block";
-//}
-//}
-// });
-
-//showList.addEventListener("mouseout", () => {
-// hoverInfo.style.display = "none";
-// });
-
-// fetch("https://api.tvmaze.com/shows")
-//   .then((r) => r.json())
-//   .then((data) => {
-//     shows = data; //store the fetched data in the 'shows' array
-//     console.log(shows);
-//     shows.forEach((show) => {
-//       addNames(show);
-//     });
-//   })
-//   .catch((error) => {
-//     //moved '.catch' block back to promise by fetch and not to the event listener to resolve error.
-//     console.error("Error fetching data:", error);
-//   });
-
-// let shows = [];
