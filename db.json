@@ -1,1 +1,25 @@
-
+{
+  "userData": [
+    {
+      "image": "https://static.tvmaze.com/uploads/images/medium_portrait/81/202627.jpg",
+      "name": "Hello",
+      "runtime": "10",
+      "language": "No",
+      "rating": {
+        "average": "2.2"
+      },
+      "id": 1
+    },
+    {
+      "image": "https://static.tvmaze.com/uploads/images/medium_portrait/81/202627.jpg",
+      "name": "Rex ",
+      "runtime": "20",
+      "language": "Yes",
+      "rating": {
+        "average": "3.3"
+      },
+      "id": 2
+    }
+  ],
+  "shows": []
+}
