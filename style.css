@@ -1,44 +1,54 @@
 /* Body */
 body {
-  background: white;
+  background-color: #5C4B99;
+  
   text-align: center;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
 }
 .top-header-section {
-  background-color: #3361ff;
+  background-color: #9F91CC;
   font-size: large;
   padding: 1%;
   border-style: solid;
 }
+#pitch{
+  font-size: x-small;
+}
 
 /* Left Side of Site */
 .left-half {
-  background-color: white;
+  background-color: #5C4B99;
   position: absolute;
   top: 25%;
-  bottom: 0%;
+  bottom: 24.3%;
   width: 48%;
   left: 9px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-right: 10px;
 }
 .show-rating {
   background-color: black;
-  color: white;
+  color: #5C4B99;
   padding: 5px;
   position: center;
   bottom: 0;
-  width: 90%;
+  width: 96%;
   text-align: center;
   transition: opacity 0.3s;
   pointer-events: none;
-  margin-left: 30px;
+  margin-left: 0px;
 }
 .left-half-details {
-  background-color: #3361ff;
-  margin-top: 5%;
+  background-color: #9F91CC;
   text-align: left;
   border-style: solid;
-  
+  width: 47%;
+  margin-top: 31%;
+  position: absolute;
+  margin-left: 40%;
 }
 .hover-text {
   font-size: smaller;
@@ -48,20 +58,23 @@ body {
 
 /* Right Side of Site */
 .right-half {
-  background-color: #3361ff;
+  background-color: #9F91CC;
   position: absolute;
   top: 25%;
   bottom: -13.9%;
-  width: 48%;
+  width: 47%;
   right: 9px;
   border-style: solid;
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
 }
 #form {
   margin: 2%;
   padding: 1%;
 }
 .search-list {
-  background-color: white;
+  background-color: #5C4B99;
 }
 .hidden {
   display: none;
@@ -70,23 +83,40 @@ body {
 .search-list {
   list-style-type: none;
   padding: 0;
-  border: 1px solid #ddd;
+  border: 1px solid #5C4B99;
 }
 
 .search-list li {
   padding: 8px 16px;
-  border-bottom: 2px solid #ddd;
+  border-bottom: 2px solid #5C4B99;
   border-color: rgb(40, 40, 40);
 }
-
-.new-show-div {
-  background-color: #3361ff;
-  margin-top: 5%;
-  text-align: left;
-  border-style: solid;
+#query-details {
+  background-color: #FFDBC3;
+}
+.container {
+  display: flex;
 }
 
-#submit-span {
+/* New Show Form */
+.new-show-div {
+  background-color: #9F91CC;
+  width: 48%; 
+  height: 100px;
+  text-align: left;
+  border-style: solid;
+  position: absolute;
+  bottom: 35px; 
+  left: 24.7%; 
+  transform: translateX(-50%);
+  margin-top: 29%;
+  height: 29%;
+  top: 25%;
+}
+
+
+
+ #submit-span {
   text-align: right;
 }
 
@@ -96,4 +126,22 @@ body {
 
 #new-show-btn{
   position: absolute;
+}
+#form-image{
+  background-color: #FFDBC3;
+}
+#form-title{
+  background-color: #FFDBC3;
+}
+#form-run{
+  background-color: #FFDBC3;
+}
+#form-lang{
+  background-color: #FFDBC3;
+}
+#form-rating{
+  background-color: #FFDBC3;
+}
+#new-show-btn{
+  background-color: #5C4B99;
 }
