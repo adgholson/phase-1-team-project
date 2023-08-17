@@ -8,12 +8,20 @@
   </head>
   <body>
     <script src="./index.js"></script>
+    
+    
     <header class="top-header">
       <div class="top-header-section">
-        <h1>Show Finder</h1>
+        <h1>TV Show Finder
+        </h1>
+        
       </div>
     </header>
-    <div class="right-half">
+    
+    
+  <div class="container">
+    
+      <div class="right-half">
       <div class="search-bar">
         <form role="search-role" id="form">
           <input
@@ -26,11 +34,12 @@
       </div>
       <ul class="search-list"></ul>
     </div>
+    
     <div class="left-half">
       <div class="show-image">
         <p class="hover-text">Hover me!</p>
         <img
-          src="https://static.vecteezy.com/system/resources/previews/001/271/111/original/movies-popcorn-design-vector.jpg"
+          src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRerAPKFSUleA8Q3j0oIbkE4LA5OOmCb4h3ExCHUzSGyRND3cIN"
           alt="Image Holder"
           width="250"
           height="330"
@@ -38,7 +47,6 @@
         />
         <div class="show-rating hidden" id="show-rating">Rating: </div>
       </div>
-      
       <div class="left-half-details">
         <ul id="show-name">
           Name:
@@ -48,20 +56,23 @@
         </ul>
         <ul id="show-lang">Language:</ul>
       </div> 
-      <div class="new-show-div">
-        <form id="new-show">
-          <span id="submit-span"> Submit A New Show!</span>
-          <ul class="new-show-form">
-          <li><input id="form-image" placeholder="Paste Image URL here"></li>
-          <li><input id="form-title" placeholder="Show Name"></li>
-          <li><input id="form-run" placeholder="Show Runtime"></li>
-          <li><input id="form-lang" placeholder="Show Language"></li>
-          <li><input id="form-rating" placeholder="New Show Rating"></li>
-          <button type="button" id="new-show-btn">Add New Show!</button>
-        </ul>
-        </form>
-      </div>
+    
+    </div> 
+  </div>
+    
+    
+    <div class="new-show-div">
+      <form id="new-show">
+        <span id="submit-span"> Submit A New Show!</span>
+        <ul class="new-show-form">
+        <li><input id="form-image" placeholder="Paste Image URL here"></li>
+        <li><input id="form-title" placeholder="Show Name"></li>
+        <li><input id="form-run" placeholder="Show Runtime"></li>
+        <li><input id="form-lang" placeholder="Show Language"></li>
+        <li><input id="form-rating" placeholder="New Show Rating"></li>
+        <button type="button" id="new-show-btn">Add New Show!</button>
+      </ul>
+      </form>
     </div>
-   
   </body>
 </html>
