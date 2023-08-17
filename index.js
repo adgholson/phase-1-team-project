@@ -93,6 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
         shows.push(newShowResponse);
         addNames(newShowResponse);
       });
+      showImageInput.value ="";
     showNameInput.value = "";
     showRuntimeInput.value = "";
     showLanguageInput.value = "";
